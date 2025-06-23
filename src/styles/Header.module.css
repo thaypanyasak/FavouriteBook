@@ -1,0 +1,82 @@
+.header {
+  margin: 0;
+  background-color: var(--header-bg, #2aba67);
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  gap: 15px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.companyInfo {
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navMeny {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+}
+
+.navLink:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: var(--text-color, #ffffff);
+}
+
+.themeToggle {
+  width: 54px;
+  height: 54px;
+  background-color: var(--primary-color, #34d399);
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  padding: 0.3rem;
+  backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+.themeToggle:hover {
+  transform: rotate(120deg);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+  color: #ffffff;
+  font-size: 25px;
+}

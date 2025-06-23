@@ -1,0 +1,210 @@
+.card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 21rem;
+  animation: slideIn 0.5s ease;
+  overflow: visible;
+  color: var(--text-color);
+}
+
+.card:hover {
+  animation: slideIn 0.3s ease-in-out;
+  transform: scale(1.03);
+}
+.cardDark:hover {
+  box-shadow: 0 0 15px rgba(72, 239, 196, 0.6);
+}
+
+.read {
+  background-color: rgba(38, 166, 154, 0.15);
+  border-color: #26a69a !important;
+}
+
+.newCard {
+  animation: bounceIn 0.7s ease-out forwards;
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+  transform-origin: bottom;
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-10px);
+  }
+  80% {
+    transform: scale(0.98) translateY(4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.slideOut {
+  animation: vanishSpark 0.8s ease forwards;
+  transform-origin: center center;
+  z-index: 999;
+  position: relative;
+  filter: brightness(1.2) blur(0px);
+}
+@keyframes vanishSpark {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    filter: brightness(1.2) blur(0px);
+  }
+  30% {
+    transform: scale(1.05) rotate(5deg);
+    filter: brightness(1.5) blur(2px);
+  }
+  60% {
+    transform: scale(0.95) rotate(-10deg) translateX(30px);
+    filter: brightness(1.8) blur(4px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(0.6) rotate(20deg) translateX(150%) translateY(-30px);
+    opacity: 0;
+    filter: brightness(2) blur(10px);
+  }
+}
+
+.titleTooltip {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.tooltipText {
+  position: relative;
+  cursor: help;
+  display: inline-block;
+}
+
+.tooltipText::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(70% + 10px);
+  left: 0;
+  transform: translateX(0);
+  background-color: #2a3644;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.tooltipText::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 10px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #2a3644 transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9;
+}
+
+.tooltipText:hover::after,
+.tooltipText:hover::before {
+  opacity: 1;
+}
+
+.spacebar {
+  height: 8px;
+}
+
+.details p {
+  margin: 4px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.footerRow {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.editBtn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  font-family: Poppins;
+}
+
+.editBtn:hover {
+  background-color: #1976d2;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}

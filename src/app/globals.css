@@ -1,0 +1,144 @@
+:root {
+  --bg-color: #f3fdfb;
+  --text-color: #2c3e50;
+  --card-bg: #fff;
+  --primary-color: #27ae60;
+  --accent-color: #3498db;
+  --input-bg: #fefefe;
+  --select-bg: #fff;
+  --notice-bg: #e0ffe0;
+  --notice-text: #006400;
+}
+
+html.dark {
+  --bg-color: #1a2520;
+  --text-color: #030303;
+  --card-bg: #1e1e1e;
+  --primary-color: #00c896;
+  --accent-color: #ff8a65;
+  --input-bg: #222831;
+  --select-bg: #2c3e50;
+  --notice-bg: #1d2b2b;
+  --notice-text: #aaf0d1;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card,
+.modal,
+.wrapper,
+.statCard,
+.select,
+.input,
+.button,
+.notice,
+.BookCard,
+.BookForm,
+.BookStat,
+.BookApp,
+.container,
+.inputWrapper,
+.InputWrapper,
+.statsGrid,
+.statCard {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.select,
+.input {
+  background-color: var(--input-bg);
+  border: 2px solid var(--primary-color);
+}
+
+.notice {
+  background-color: var(--notice-bg);
+  color: var(--notice-text);
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.dark body,
+html.themeDark body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+html.dark .card,
+html.dark .modal,
+html.dark .wrapper,
+html.dark .statCard,
+html.dark .BookCard,
+html.dark .BookForm,
+html.dark .BookStat,
+html.dark .BookApp,
+html.dark .container,
+html.dark .statsGrid,
+html.dark .statCard {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-color: var(--primary-color);
+}
+
+html.dark select,
+html.dark input,
+html.dark textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+html.dark .navLink:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+html.dark .read {
+  background-color: rgba(0, 0, 0, 0.35);
+  border-color: #26a69a !important;
+}
+
+body.dark .card:hover {
+  box-shadow: 0 0 15px rgba(72, 239, 196, 0.6);
+}
+
+.header {
+  background-color: #2aba67;
+}
+
+html.dark .header {
+  background: linear-gradient(to right, #142019, #1e352a, #2f4e3d);
+}
